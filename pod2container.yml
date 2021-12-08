@@ -1,1 +1,14 @@
-
+apiVersion: v1
+kind: Pod
+metadata:
+  name: brahma2pods
+spec:
+  containers:
+    - name: nginx-bgg
+      image: nginx
+      ports:
+        - containerPort: 8080
+   - name: watcher-bgg
+      image: afakharany/watcher
+      ports:
+        - containerPort: 8090
