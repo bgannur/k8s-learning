@@ -1,0 +1,23 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels: 
+      app: helloWorld
+  template:
+    metadata: 
+      labels:
+        app: helloWorld
+    spec:
+      containers:
+        - name: k8s-demo
+          image: bgannur/k8s-learning
+          ports: 
+            - name: nodejs-port
+              containerPort: 3000
+        
+      
+      
